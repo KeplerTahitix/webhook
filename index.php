@@ -28,10 +28,7 @@ if($method == 'POST'){
 	}
 
 	$response = new \stdClass();
-	$response->fulfillmentMessages = array($response->text);
-	$response->text = array($text);
-	/*$response->displayText = $text;
-	$response->source = "webhook";*/
+	$response->fulfillmentMessages = array($response->text = array($text));
 	echo json_encode($response);
 }
 else
