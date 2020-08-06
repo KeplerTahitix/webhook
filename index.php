@@ -30,6 +30,10 @@ if($method == 'POST'){
 	$response = new \stdClass();
 	$response->text = array($text);
 	echo json_encode($response);
+	$response->text = "";
+	echo json_encode($response);
+	$response->fulfillmentMessages = array();
+	echo json_encode($response);
 }
 else
 {
