@@ -29,6 +29,7 @@ if($method == 'POST'){
 
 	$response = new \stdClass();
 	$response->text = array($text);
+	$response->text = $response;
 	echo json_encode($response);
 }
 else
