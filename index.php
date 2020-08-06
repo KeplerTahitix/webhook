@@ -11,7 +11,7 @@ if($method == 'POST'){
 
 	switch ($text) {
 		case '{
-  "responseId": "57d4afcf-cec1-48a8-b236-a7f6869c1619-0820055c",
+  "responseId": "b4fd6713-efd0-452a-98ce-35be3b779593-0820055c",
   "queryResult": {
     "queryText": "hi",
     "parameters": {
@@ -27,20 +27,28 @@ if($method == 'POST'){
         }
       }
     ],
-    "webhookSource": "webhook",
+    "outputContexts": [
+      {
+        "name": "projects/webhook-wtff/agent/sessions/e2a51ad9-4bbe-ce4e-0300-530d0efebe17/contexts/__system_counters__",
+        "parameters": {
+          "no-input": 0,
+          "no-match": 0,
+          "text": "hi",
+          "text.original": "hi"
+        }
+      }
+    ],
     "intent": {
       "name": "projects/webhook-wtff/agent/intents/266f4206-b95c-49d5-ae7b-16ac6cc6d826",
       "displayName": "General"
     },
     "intentDetectionConfidence": 0.3,
-    "diagnosticInfo": {
-      "webhook_latency_ms": 289
-    },
     "languageCode": "en"
   },
-  "webhookStatus": {
-    "message": "Webhook execution successful"
-  }
+  "originalDetectIntentRequest": {
+    "payload": {}
+  },
+  "session": "projects/webhook-wtff/agent/sessions/e2a51ad9-4bbe-ce4e-0300-530d0efebe17"
 }':
 			$speech = "Hi, Nice to meet you";
 			break;
