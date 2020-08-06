@@ -29,7 +29,7 @@ if($method == 'POST'){
 
 	$response = new \stdClass();
 	$response->fulfillmentMessages = array(json_encode($response->text->text = array($text)));
-	echo json_encode($response);
+	echo $response;
 }
 else
 {
