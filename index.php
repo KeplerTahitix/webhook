@@ -28,9 +28,8 @@ if($method == 'POST'){
 	}
 
 	$response = new \stdClass();
-	$response->fulfillmentMessages = array()->($response->text->text = array($text));
-	//$response->fulfillmentMessages = array();
-	//$response->text->text = array($text);
+	$response->text->text = array($text);
+	$response->fulfillmentMessages = array()->$response;
 	echo json_encode($response);
 }
 else
