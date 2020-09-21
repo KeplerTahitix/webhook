@@ -11,24 +11,26 @@ if($method == 'POST'){
 
 	switch ($text) {
 		case 'hi':
-			$text = "Hi, Nice to meet you";
+			$speech = "Hi, Nice to meet you";
 			break;
 
 		case 'bye':
-			$text = "Bye, good night";
+			$speech = "Bye, good night";
 			break;
 
 		case 'anything':
-			$text = "Yes, you can type anything here.";
+			$speech = "Yes, you can type anything here.";
 			break;
 		
 		default:
-			$text = "Sorry, I didnt get that. Please ask me something else.";
+			$speech = "Sorry, I didnt get that. Please ask me something else.";
 			break;
 	}
 
 	$response = new \stdClass();
-	$response->fulfillmentMessages = array($response->text->text = array($text));
+	$response->speech = "";
+	$response->displayText = "";
+	$response->source = "webhook";
 	echo json_encode($response);
 }
 else
